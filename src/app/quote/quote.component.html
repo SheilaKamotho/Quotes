@@ -10,7 +10,7 @@
             <h6>{{quote.quote}}</h6>
             <app-like-dislike></app-like-dislike>
             <button (click)='toggleDetails(i)' class="btn btn-warning">Quote Details</button>
-            <app-quote-detail *ngIf='quote.showAuthor'[quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-detail>
+            <app-quote-detail *ngIf='quote.showAuthor'[quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quote-detail>
           </div>
           
         </div>
