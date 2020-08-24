@@ -7,7 +7,7 @@
         <hr>
         <div *ngFor='let quote of quotes;let i = index'>
           <div>
-            <h6>{{quote.quote}}</h6>
+            <h6 appHighlights>{{quote.quote}}</h6>
             <app-like-dislike></app-like-dislike>
             <button (click)='toggleDetails(i)' class="btn btn-warning">Quote Details</button>
             <app-quote-detail *ngIf='quote.showAuthor'[quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quote-detail>
