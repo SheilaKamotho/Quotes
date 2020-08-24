@@ -16,7 +16,11 @@ export class QuoteComponent implements OnInit {
     new Quote(1, 'If you want the rainbow you have to put up with the rain.', 'Dolly Patron', 'Sheila Kamotho',new Date(2020,8,22)),
     new Quote(1, 'Few human beings wake up in the morning and ask themselves:"What can I do today to undermine my credibility and mess up the day for someone else?" Most mistakes people make are just a result of a lack of awareness.And here is the payoff for you: as you seek out the good in people, not only will they want to show up more fully for you, but you will see more good in your world.', 'Robin Sharma (The Little Black Book for Stunning Success)', 'Sheila Kamotho',new Date(2020,8,22)),
   ];
-
+  completeQuote(isComplete, index){
+    if (isComplete) {
+      this.quotes.splice(index,1);
+    }
+  }
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
